@@ -30,7 +30,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Upload to S3
         run: |
-          aws s3 cp --region ap-northeast-2 ./test-build.zip s3://test-s3-highjoon/test-build.zip
+          aws s3 cp --region ap-northeast-2 ./test-build.zip s3://next-blog-s3/test-build.zip
       - name: Deploy
         run: aws deploy create-deployment
           --application-name next-blog-codeDeploy
