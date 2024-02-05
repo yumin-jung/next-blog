@@ -30,10 +30,10 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Upload to S3
         run: |
-          aws s3 cp --region ap-northeast-2 ./test-build.zip s3://next-blog-s3/test-build.zip
+          aws s3 cp --region ap-northeast-2 ./test-build.zip s3://next-blog-s3-bucket/test-build.zip
       - name: Deploy
         run: aws deploy create-deployment
           --application-name next-blog-codeDeploy
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name next-blog-group
-          --s3-location bucket=next-blog-s3,bundleType=zip
+          --s3-location bucket=next-blog-s3-bucket,key=test-build.zip,bundleType=zip
