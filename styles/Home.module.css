@@ -3,14 +3,29 @@
     line-height: 1.5;
 }
 
-.padding1px {
-    padding-top: 1px;
-}
-
 .headingLg {
     font-size: 1.5rem;
     line-height: 1.4;
     margin: 1rem 0;
+}
+
+.headingXl {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
+.subheading {
+    margin: 1rem 0;
+}
+
+.bodyMd {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.padding1px {
+    padding-top: 1px;
 }
 
 .list {

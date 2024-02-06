@@ -12,6 +12,7 @@ const Post = ({ postData }: {
         contentHtml: string
     }
 }) => {
+    const html = postData.contentHtml.replace(/\r?\n/g, '<br />');
     return (
         <div className={postStyle.container}>
             <Head>
@@ -19,8 +20,11 @@ const Post = ({ postData }: {
             </Head>
             <article>
                 <h1 className={homeStyles.headingXl}>{postData.title}</h1>
-                <div>{postData.date}</div>
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <div className={homeStyles.subheading}>{postData.date}</div>
+                <div
+                    className={homeStyles.bodyMd}
+                    dangerouslySetInnerHTML={{ __html: html }}
+                />
             </article>
         </div>
     )
