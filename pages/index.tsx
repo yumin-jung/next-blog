@@ -23,7 +23,7 @@ const Home = ({ allPostsData }: {
             (This is a blog)
           </p> */}
           <section className={`${homeStyles.headingMd} ${homeStyles.padding1px}`}>
-            <h2 className={homeStyles.headingLg}>Blog</h2>
+            <h2 className={homeStyles.headingLg}>기록 남기기</h2>
             <ul className={homeStyles.list}>
               {allPostsData.map(({ id, title, date }) =>
                 <li className={homeStyles.listItem} key={id}>
