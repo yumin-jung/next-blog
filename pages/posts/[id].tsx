@@ -4,6 +4,7 @@ import Head from 'next/head'
 import React from 'react'
 import homeStyles from '../../styles/Home.module.css'
 import postStyle from '../../styles/Post.module.css'
+import Comment from "@/components/Comment"
 
 const Post = ({ postData }: {
     postData: {
@@ -26,6 +27,9 @@ const Post = ({ postData }: {
                     dangerouslySetInnerHTML={{ __html: html }}
                 />
             </article>
+            <section>
+                <Comment />
+            </section>
         </div>
     )
 }
