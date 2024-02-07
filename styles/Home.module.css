@@ -10,18 +10,21 @@
 }
 
 .headingXl {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     line-height: 1.4;
-    margin: 1rem 0;
+    margin-top: 2rem;
 }
 
 .subheading {
-    margin: 1rem 0;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .bodyMd {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
 }
 
 .padding1px {
@@ -30,8 +33,7 @@
 
 .list {
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    padding-top: 2rem;
 }
 
 .lightText {
