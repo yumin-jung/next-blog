@@ -14,7 +14,7 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@v4
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable --immutable-cache
       - name: Build
         run: yarn build
       - name: zip create
