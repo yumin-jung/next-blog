@@ -13,11 +13,36 @@ jobs:
     steps:
       - name: Checkout source code.
         uses: actions/checkout@v4
-      - name: Install Dependencies
+      - name: Set Yarn Version
+        id: set-version
         run: |
-          yarn add swc
-          yarn install --immutable --immutable-cache
+          yarn set version berry
+          echo "YARN_VERSION=$(yarn -v)" >> $GITHUB_OUTPUT
+      - name: Yarn Cache - PnP
+        uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: |
+            .yarn/cache
+            .pnp.*
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-${{ steps.set-version.outputs.YARN_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-
+      # - name: NextJS Cach
+      #   uses: actions/cache@v4
+      #   id: nextjs-cache
+      #   with:
+      #     path: ${{ github.workspace }}/.next/cache
+      #     key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+      - name: Install SWC # next-swc dependency handling
+        run: yarn add swc
+      - name: Install Dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --immutable --immutable-cache
       - name: Build
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn build
       - name: zip create
         run: zip -qq -r ./test-build.zip .
