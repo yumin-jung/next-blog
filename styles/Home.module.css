@@ -36,19 +36,32 @@
 .grid {
     padding-top: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+}
+
+/* Desktop */
+@media screen and (min-width:768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:767px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .gridItem {
     font-size: 1rem;
     aspect-ratio: 1.2;
-    background-color: #fafafa;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 @keyframes grid-animation {
