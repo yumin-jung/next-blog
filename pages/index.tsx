@@ -1,6 +1,6 @@
 import Head from "next/head"
 import homeStyles from '../styles/Home.module.css'
-import { GetStaticProps, NextPage } from "next"
+import { GetStaticProps } from "next"
 import { getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
 
@@ -18,10 +18,6 @@ const Home = ({ allPostsData }: {
           <title>Yumin</title>
         </Head>
         <section className={homeStyles.headingMd}>
-          {/* <p>[Yumin Jung Introduction]</p>
-          <p>
-            (This is a blog)
-          </p> */}
           <section className={`${homeStyles.headingMd} ${homeStyles.padding1px}`}>
             <h2 className={homeStyles.headingLg}>기록 남기기</h2>
             <ul className={homeStyles.list}>

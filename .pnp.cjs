@@ -33,6 +33,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.56.0"],\
           ["eslint-config-next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["gray-matter", "npm:4.0.3"],\
+          ["highlight.js", "npm:11.9.0"],\
           ["next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["nginx", "npm:1.0.8"],\
           ["react", "npm:18.2.0"],\
@@ -2298,6 +2299,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["highlight.js", [\
+      ["npm:11.9.0", {\
+        "packageLocation": "./.yarn/cache/highlight.js-npm-11.9.0-ec99f7b12f-44b3e42bc0.zip/node_modules/highlight.js/",\
+        "packageDependencies": [\
+          ["highlight.js", "npm:11.9.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["html-void-elements", [\
       ["npm:3.0.0", {\
         "packageLocation": "./.yarn/cache/html-void-elements-npm-3.0.0-e1a7d1151b-59be397525.zip/node_modules/html-void-elements/",\
@@ -3356,6 +3366,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.56.0"],\
           ["eslint-config-next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["gray-matter", "npm:4.0.3"],\
+          ["highlight.js", "npm:11.9.0"],\
           ["next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["nginx", "npm:1.0.8"],\
           ["react", "npm:18.2.0"],\

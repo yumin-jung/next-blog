@@ -1,4 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("//cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-full.css");
 
 * {
   font-family: Pretendard;
@@ -6,4 +7,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+code {
+  font-family: 'D2Coding';
+  font-weight: 400;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  line-height: 1.5;
 }

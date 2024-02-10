@@ -1822,6 +1822,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlight.js@npm:^11.9.0":
+  version: 11.9.0
+  resolution: "highlight.js@npm:11.9.0"
+  checksum: 10/44b3e42bc096a2e5207e514826a10ff7671de315a7216ebaeba76593d4f16dfe3f7078390cb5c2b08eae657694fef4fb65d775376db48480c829c83fbc4f157a
+  languageName: node
+  linkType: hard
+
 "html-void-elements@npm:^3.0.0":
   version: 3.0.0
   resolution: "html-void-elements@npm:3.0.0"
@@ -2719,6 +2726,7 @@ __metadata:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.0"
     gray-matter: "npm:^4.0.3"
+    highlight.js: "npm:^11.9.0"
     next: "npm:14.1.0"
     nginx: "npm:^1.0.8"
     react: "npm:^18"
