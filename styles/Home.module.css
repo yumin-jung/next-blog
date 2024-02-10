@@ -7,10 +7,12 @@
     font-size: 1.5rem;
     line-height: 1.4;
     margin: 1rem 0;
+    padding-left: 10px;
+    /* text-align: center; */
 }
 
 .headingXl {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 600;
     line-height: 1.4;
     margin-top: 2rem;
@@ -31,17 +33,41 @@
     padding-top: 1px;
 }
 
-.list {
-    list-style: none;
-    padding-top: 2rem;
+.grid {
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
-.lightText {
-    color: #666;
+.gridItem {
+    font-size: 1rem;
+    aspect-ratio: 1.2;
+    background-color: #fafafa;
+    border-radius: 4px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.listItem {
-    margin: 0 0 1.25rem;
+@keyframes grid-animation {
+    25% {
+        transform: rotate(2deg) scale(1.01);
+    }
+
+    50% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    75% {
+        transform: rotate(-2deg) scale(1.01);
+    }
+}
+
+.gridItem:hover {
+    opacity: 0.9;
+    animation: grid-animation 0.8s linear 1;
 }
 
 .container {
