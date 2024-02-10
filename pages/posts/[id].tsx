@@ -26,14 +26,30 @@ const Post = ({ postData }: {
         return group ? '<br/>' : match;
     });;
 
+    /**
+     * yyyy-mm-dd 형태의 데이터를 년, 월, 일 형태로 변환한다.
+     * @param {string} inputDate - yyyy-mm-dd 형태의 날짜 형식 문자열
+     * @returns {string}
+     */
+    const formatDate = (inputDate: string): string => {
+        const date = new Date(inputDate);
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+
+        return year + '년 ' + month + '월 ' + day + '일';
+    }
+
+    const postDate = formatDate(postData.date);
+
     return (
         <div className={postStyle.container}>
             <Head>
                 <title>{postData.title}</title>
             </Head>
             <article>
-                <h1 className={homeStyles.headingXl}>{postData.title}</h1>
-                <div className={homeStyles.subheading}>{postData.date}</div>
+                <h1 className={`${homeStyles.headingXl} ${homeStyles.tossface}`}>{postData.title}</h1>
+                <div className={homeStyles.subheading}>{postDate} 기록</div>
                 <div
                     className={homeStyles.bodyMd}
                     dangerouslySetInnerHTML={{ __html: html }}

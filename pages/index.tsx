@@ -17,12 +17,12 @@ const Home = ({ allPostsData }: {
           <title>Yumin</title>
         </Head>
         <section className={`${homeStyles.headingMd} ${homeStyles.padding1px}`}>
-          <h2 className={homeStyles.headingLg}>기록 남기기</h2>
+          <h2 className={`${homeStyles.headingLg} ${homeStyles.tossface}`}>기록 남기기 📝</h2>
           <ul className={homeStyles.grid}>
             {allPostsData.map(({ id, title }) =>
               <div key={id}>
                 <Link href={`/posts/${[id]}`} style={{ textDecoration: 'none' }}>
-                  <div className={homeStyles.gridItem}>{title}</div>
+                  <div className={`${homeStyles.gridItem} ${homeStyles.tossface}`}>{title}</div>
                 </Link>
               </div>
             )}

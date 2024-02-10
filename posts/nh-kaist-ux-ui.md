@@ -1,5 +1,5 @@
 ---
-title: "NH-KAIST UX/UI Research & Testing 회고"
+title: "NH-KAIST UX/UI Research & Testing 회고 📈"
 date: "2024-02-07"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Yarn Classic에서 Yarn Berry로의 마이그레이션"
+title: "Yarn Classic에서 Yarn Berry로의 마이그레이션 🐱"
 date: "2024-02-10"
 ---
 

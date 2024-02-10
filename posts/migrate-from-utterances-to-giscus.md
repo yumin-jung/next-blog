@@ -1,5 +1,5 @@
 ---
-title: "utterances에서 giscus로의 마이그레이션"
+title: "Utterances에서 Giscus로의 마이그레이션 💎"
 date: "2024-02-09"
 ---
 

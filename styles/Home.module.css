@@ -8,7 +8,6 @@
     line-height: 1.4;
     margin: 1rem 0;
     padding-left: 10px;
-    /* text-align: center; */
 }
 
 .headingXl {
@@ -19,7 +18,7 @@
 }
 
 .subheading {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -87,4 +86,8 @@
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
+}
+
+.tossface {
+    font-family: Tossface;
 }
