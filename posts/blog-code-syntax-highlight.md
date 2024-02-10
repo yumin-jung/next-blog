@@ -24,4 +24,4 @@ const html = postData.contentHtml.replace(regex, (match, group) => {
 });;
 ```
 
-따라서 위와 같이 code 태그 내부에서는 바꾸지 않도록 regex를 사용하여 바꿔주었다. regex 잘 알아두면 좋은 것 같다.
+따라서 위와 같이 code 태그 내부에서는 바꾸지 않도록 regex를 사용하여 바꿔주었다. regex 잘 알아두면 좋은 것 같다. 그런데 이 방법이 최선인지는 모르겠다.
