@@ -710,7 +710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
+"chalk@npm:^4.0.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -768,13 +768,6 @@ __metadata:
   version: 2.0.3
   resolution: "comma-separated-tokens@npm:2.0.3"
   checksum: 10/e3bf9e0332a5c45f49b90e79bcdb4a7a85f28d6a6f0876a94f1bb9b2bfbdbbb9292aac50e1e742d8c0db1e62a0229a106f57917e2d067fca951d81737651700d
-  languageName: node
-  linkType: hard
-
-"commander@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "commander@npm:7.2.0"
-  checksum: 10/9973af10727ad4b44f26703bf3e9fdc323528660a7590efe3aa9ad5042b4584c0deed84ba443f61c9d6f02dade54a5a5d3c95e306a1e1630f8374ae6db16c06d
   languageName: node
   linkType: hard
 
@@ -910,13 +903,6 @@ __metadata:
   dependencies:
     esutils: "npm:^2.0.2"
   checksum: 10/b4b28f1df5c563f7d876e7461254a4597b8cabe915abe94d7c5d1633fed263fcf9a85e8d3836591fc2d040108e822b0d32758e5ec1fe31c590dc7e08086e3e48
-  languageName: node
-  linkType: hard
-
-"dotenv@npm:^16.4.1":
-  version: 16.4.1
-  resolution: "dotenv@npm:16.4.1"
-  checksum: 10/8da20250633703686961004df3ea81b1f81e16fbe873372050676f54ca4053172d0589aae902e683eb575884d56b6bc89fe48bbac5e1e0bef606a061389ca33c
   languageName: node
   linkType: hard
 
@@ -2722,13 +2708,11 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
-    dotenv: "npm:^16.4.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.0"
     gray-matter: "npm:^4.0.3"
     highlight.js: "npm:^11.9.0"
     next: "npm:14.1.0"
-    nginx: "npm:^1.0.8"
     react: "npm:^18"
     react-dom: "npm:^18"
     remark: "npm:^15.0.1"
@@ -2789,18 +2773,6 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: 10/1db512c5c82f7ea423a2651a28950d398f49f03df6213630aefdf083d5260edeeed8d995b90c3c8742c0a2346025e748d28078a6261d316fcdade4c5c788e986
-  languageName: node
-  linkType: hard
-
-"nginx@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "nginx@npm:1.0.8"
-  dependencies:
-    chalk: "npm:^4.1.0"
-    commander: "npm:^7.2.0"
-  bin:
-    nginx-install: index.js
-  checksum: 10/8c820602967d7ca36556005a6152eb4248b2f36161f2b8bc215644d1a4f75ab9a1f4c84876a3e9bc092ca27b1efd41003248fe5f835e0967ccb1cebc35713538
   languageName: node
   linkType: hard
 
