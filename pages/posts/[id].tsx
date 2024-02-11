@@ -48,8 +48,8 @@ const Post = ({ postData }: {
                 <title>{postData.title}</title>
             </Head>
             <article>
-                <h1 className={`${homeStyles.headingXl} ${homeStyles.tossface}`}>{postData.title}</h1>
-                <div className={homeStyles.subheading}>{postDate} 기록</div>
+                <h1 className={homeStyles.headingXl}>{postData.title}</h1>
+                <div className={homeStyles.subheading}>{postDate}</div>
                 <div
                     className={homeStyles.bodyMd}
                     dangerouslySetInnerHTML={{ __html: html }}

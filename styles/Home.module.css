@@ -20,11 +20,11 @@
 .subheading {
     margin-top: 1rem;
     margin-bottom: 2rem;
+    font-size: 0.9rem;
 }
 
 .bodyMd {
     font-size: 1.1rem;
-    font-weight: 300;
     line-height: 1.8;
 }
 
@@ -54,6 +54,7 @@
 
 .gridItem {
     font-size: 1rem;
+    font-weight: 400;
     aspect-ratio: 1.2;
     border-radius: 8px;
     padding: 1.5rem;
@@ -86,8 +87,4 @@
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
-}
-
-.tossface {
-    font-family: Tossface;
 }
