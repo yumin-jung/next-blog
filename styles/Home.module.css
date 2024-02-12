@@ -26,6 +26,7 @@
 .bodyMd {
     font-size: 1.1rem;
     line-height: 1.8;
+    font-weight: 300;
 }
 
 .padding1px {
@@ -87,9 +88,4 @@
     max-width: 36rem;
     padding: 0 1rem;
     margin: 3rem auto 6rem;
-}
-
-
-.tossface {
-    font-family: Tossface;
 }

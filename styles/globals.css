@@ -4,6 +4,7 @@
 }
 
 * {
+  font-family: sans-serif, Tossface;
   color: #212529;
   box-sizing: border-box;
   padding: 0;
@@ -15,4 +16,8 @@ code {
   font-size: 0.9rem;
   border-radius: 8px;
   line-height: 1.5;
+}
+
+strong {
+  font-weight: 400;
 }
