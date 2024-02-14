@@ -67,31 +67,25 @@
 }
 
 @layer base {
+  @font-face {
+    font-family: TossFace;
+    src: url(../fonts/TossFaceFontWeb.otf) format('woff2');
+  }
+
   * {
-    @apply border-border;
+    /* @apply text-[#212121]; */
+    font-family: sans-serif, Tossface;
   }
 
   body {
     @apply bg-background text-foreground;
   }
-}
 
-@font-face {
-  font-family: TossFace;
-  src: url(../fonts/TossFaceFontWeb.otf) format('woff2');
-}
+  code {
+    @apply font-normal text-[0.9rem] leading-normal rounded-lg;
+  }
 
-* {
-  font-family: sans-serif, Tossface;
-}
-
-code {
-  font-weight: 400;
-  font-size: 0.9rem;
-  border-radius: 8px;
-  line-height: 1.5;
-}
-
-strong {
-  font-weight: 400;
+  a {
+    text-decoration: underline gray;
+  }
 }

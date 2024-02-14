@@ -1,12 +1,11 @@
 'use client';
+
 import hljs from 'highlight.js';
 import 'highlight.js/styles/atom-one-light.css';
 import { getAllPostIds, getPostData } from '@/lib/posts'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import React, { useEffect } from 'react';
-import homeStyles from '../../styles/Home.module.css'
-import postStyle from '../../styles/Post.module.css'
 import Comment from "@/components/Comment"
 
 const Post = ({ postData }: {
@@ -43,21 +42,19 @@ const Post = ({ postData }: {
     const postDate = formatDate(postData.date);
 
     return (
-        <div className={postStyle.container}>
+        <div className="max-w-xl mt-16 mb-24 mx-auto px-4 py-0">
             <Head>
                 <title>{postData.title}</title>
             </Head>
             <article>
-                <h1 className={homeStyles.headingXl}>{postData.title}</h1>
-                <div className={homeStyles.subheading}>{postDate}</div>
+                <h1 className="text-[1.6rem] leading-[1.4] mt-8">{postData.title}</h1>
+                <div className="text-[0.9rem] mt-4 mb-8">{postDate}</div>
                 <div
-                    className={homeStyles.bodyMd}
+                    className="text-[1.1rem] leading-[1.8] font-light"
                     dangerouslySetInnerHTML={{ __html: html }}
                 />
             </article>
-            <section>
-                <Comment />
-            </section>
+            <Comment />
         </div>
     )
 }
