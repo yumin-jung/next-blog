@@ -9,6 +9,6 @@ date: "2024-02-10"
 
 Yarn Berry의 PnP 설정을 통한 Zero-Install을 하려고 하였지만 완벽하게 되지는 않았다. 나의 경우에는 next-swc 관련한 의존성들이 .yarn/unplugged에 저장되어 git clone만으로는 실행이 되지 않았고 다시 yarn 명령어로 설치를 해주어야 했다. 하지만 거의 2초 정도에 모두 설치가 됐기 때문에 node_modules의 설치 속도와 비교했을 때는 큰 차이가 있었다.
 
-Yarn Berry 도입 과정에서 [Turborepo와의 호환 이슈가 있다는 글](https://blog.dramancompany.com/2023/02/%EB%A6%AC%EB%A9%A4%EB%B2%84-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A2%8C%EC%B6%A9%EC%9A%B0%EB%8F%8C-yarn-berry-%EB%8F%84%EC%9E%85%EA%B8%B0/)도 보았다. Terborepo는 모노레포를 구축하는 것을 도와주는 도구로 알고 있는데 호환성 이슈가 있어 pnpm을 사용한다는 문장이 있었다. 모노레포 구축 도구에도 Lerna, Turborepo, Nx도 있는 것으로 알고 있는데 다른 조합에서는 Yarn Berry가 도입이 가능할까? 가능하다면 왜 그 조합 대신 다른 조합을 사용하게 되었을까? 모노레포는 왜 구축할까?
+Yarn Berry 도입 과정에서 [Turborepo와의 호환 이슈가 있다는 글](https://blog.dramancompany.com/2023/02/%EB%A6%AC%EB%A9%A4%EB%B2%84-%EC%9B%B9-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A2%8C%EC%B6%A9%EC%9A%B0%EB%8F%8C-yarn-berry-%EB%8F%84%EC%9E%85%EA%B8%B0/)도 보았다. 모노레포의 구축을 도와주는 도구인 Turborepo와 Yarn Berry가 호환성 이슈가 있어 pnpm을 사용한다는 내용이었다. 여기서 궁금했던 부분은 모노레포 구축 도구에는 Lerna, Turborepo, Nx도 있는 것으로 알고 있는데 다른 조합에서는 Yarn Berry가 도입이 가능할지, 가능하다면 왜 그 조합 대신 다른 조합을 사용하게 되었는지이다. 더 알아봐야겠다.
 
 아직 모르는 게 너무 많다..
