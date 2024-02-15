@@ -15,7 +15,7 @@ const Post = ({ postData }: {
     const regex = /<code[\s\S]*?<\/code>|(\n)/g;
     const html = postData.contentHtml.replace(regex, (match, group) => {
         return group ? '<br/>' : match;
-    });;
+    });
 
     /**
      * yyyy-mm-dd 형태의 데이터를 년, 월, 일 형태로 변환한다.
