@@ -73,19 +73,20 @@
   }
 
   * {
-    /* @apply text-[#212121]; */
     font-family: sans-serif, Tossface;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  code {
-    @apply font-normal text-[0.9rem] leading-normal rounded-lg;
   }
 
   a {
     text-decoration: underline gray;
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: 1rem 0;
+    border-radius: 8px;
+  }
+
+  pre [data-line] {
+    padding: 0 1rem;
   }
 }
