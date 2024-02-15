@@ -11,13 +11,14 @@ const Home = ({ allPostsData }: {
 }) => {
   return (
     <>
-      <div className={`max-w-xl mt-12 mb-24 mx-auto px-4 py-0`}>
+      <div className="max-w-xl mt-12 mb-24 mx-auto px-4 py-0">
         <Head>
           <title>기록 남기기</title>
         </Head>
-        <section className={`text-[1.2rem] leading-normal pt-px`}>
-          <h2 className={`text-2xl leading-[1.4] mx-0 my-4`}>기록 남기기 📝</h2>
-          <ul className={`grid grid-cols-[repeat(3,1fr)] gap-4 pt-6`}>
+        <section className="text-[1.2rem] leading-normal pt-px">
+          <h2 className="text-2xl leading-[1.4] mx-0 my-4 pl-2">기록 남기기 📝</h2>
+          <ul className="grid gap-4 pt-6 grid-cols-[repeat(2,1fr)]
+                  md:grid-cols-[repeat(3,1fr)]">
             {allPostsData.map(({ id, title }) =>
               <Link
                 key={id}
