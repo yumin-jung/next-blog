@@ -23,9 +23,9 @@ const Home = ({ allPostsData }: {
                 key={id}
                 href={`/posts/${[id]}`}
                 style={{ textDecoration: 'none' }}
-                className={`text-base aspect-[1.2] hover:animate-wiggle
-                flex flex-col items-center shadow-[rgba(0,0,0,0.1)_0px_4px_12px] 
-                p-6 rounded-lg`}
+                className={`flex flex-col text-base aspect-[1.2] items-center
+                shadow-[rgba(0,0,0,0.1)_0px_4px_12px] p-6 rounded-lg
+                hover:animate-wiggle`}
               >
                 {title}
               </Link>

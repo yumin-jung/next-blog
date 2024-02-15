@@ -11,7 +11,7 @@ const Post = ({ postData }: {
         contentHtml: string
     }
 }) => {
-    // code tag 안에서는 newline이 <br/>이 되지 않고 나머지 경우만 적용
+    /* code tag 안에서는 newline이 <br/>이 되지 않고 나머지 경우만 적용 */
     const regex = /<code[\s\S]*?<\/code>|(\n)/g;
     const html = postData.contentHtml.replace(regex, (match, group) => {
         return group ? '<br/>' : match;

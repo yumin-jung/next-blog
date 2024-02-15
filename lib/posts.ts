@@ -9,7 +9,17 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-export function getSortedPostsData() {
+interface AllPostsData {
+    date: string;
+    title: string;
+    id: string;
+}
+
+/**
+ * posts 디렉터리에 있는 md 파일의 데이터를 불러와 날짜순으로 정렬하여 반환한다.
+ * @returns {AllPostsData[]}
+ */
+export function getSortedPostsData(): AllPostsData[] {
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, '');
@@ -28,7 +38,18 @@ export function getSortedPostsData() {
     });
 }
 
-export function getAllPostIds() {
+interface GetAllPostIds {
+    params: {
+        id: string;
+    }
+}
+
+/**
+ * posts 디렉터리에 있는 모든 파일의 데이터 중
+ * id를 불러와 날짜순으로 정렬하여 반환한다.
+ * @returns {GetAllPostIds[]}
+ */
+export function getAllPostIds(): GetAllPostIds[] {
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map(fileName => {
         return {
@@ -39,7 +60,20 @@ export function getAllPostIds() {
     })
 }
 
-export async function getPostData(id: string) {
+interface GetPostData {
+    id: string;
+    contentHtml: string;
+    date: string;
+    title: string;
+}
+
+/**
+ * posts 디렉터리에서 id에 해당하는 데이터를 불러와
+ * 스타일링하여 id, date, title과 함께 반환한다.
+ * @param {string} id
+ * @returns {Promise<GetPostData>}
+ */
+export async function getPostData(id: string): Promise<GetPostData> {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf-8');
     const matterResult = matter(fileContents);
@@ -48,8 +82,6 @@ export async function getPostData(id: string) {
         .use(remarkRehype)
         .use(rehypePrettyCode, {
             theme: "tokyo-night",
-            // keepBackground: false,
-
         })
         .use(rehypeStringify)
         .process(matterResult.content);
