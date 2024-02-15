@@ -13,7 +13,7 @@ const Home = ({ allPostsData }: {
     <>
       <div className={`max-w-xl mt-12 mb-24 mx-auto px-4 py-0`}>
         <Head>
-          <title>Yumin</title>
+          <title>기록 남기기</title>
         </Head>
         <section className={`text-[1.2rem] leading-normal pt-px`}>
           <h2 className={`text-2xl leading-[1.4] mx-0 my-4`}>기록 남기기 📝</h2>
