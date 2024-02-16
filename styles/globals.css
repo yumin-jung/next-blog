@@ -72,8 +72,13 @@
     src: url(../fonts/TossFaceFontWeb.otf) format('woff2');
   }
 
+  @font-face {
+    font-family: source-code-pro;
+    src: url(../fonts/SourceCodePro-Regular.otf) format('woff2');
+  }
+
   * {
-    font-family: sans-serif, Tossface;
+    font-family: sans-serif, Tossface, source-code-pro;
   }
 
   a {
@@ -84,10 +89,14 @@
     overflow-x: auto;
     padding: 1rem 0;
     border-radius: 6px;
-    font-size: 16px;
   }
 
   pre [data-line] {
     padding: 0 1rem;
+  }
+
+  span {
+    font-family: source-code-pro;
+    font-size: 12px;
   }
 }
