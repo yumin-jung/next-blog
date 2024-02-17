@@ -3,7 +3,9 @@ import { GetStaticProps } from "next"
 import { getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
 
-const Home = ({ allPostsData }: {
+const Home = ({
+  allPostsData,
+}: {
   allPostsData: {
     title: string
     id: string
@@ -17,34 +19,36 @@ const Home = ({ allPostsData }: {
         </Head>
         <section className="text-[1.2rem] leading-normal pt-px">
           <h2 className="text-2xl leading-[1.4] mx-0 my-4 pl-2">기록 남기기 📝</h2>
-          <ul className="grid gap-4 pt-6 grid-cols-[repeat(2,1fr)]
-                  md:grid-cols-[repeat(3,1fr)]">
-            {allPostsData.map(({ id, title }) =>
+          <ul
+            className="grid gap-4 pt-6 grid-cols-[repeat(2,1fr)]
+                  md:grid-cols-[repeat(3,1fr)]"
+          >
+            {allPostsData.map(({ id, title }) => (
               <Link
                 key={id}
                 href={`/posts/${[id]}`}
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: "none" }}
                 className={`flex flex-col text-base aspect-[1.2] items-center
                 shadow-[rgba(0,0,0,0.1)_0px_4px_12px] p-6 rounded-lg
                 hover:animate-wiggle`}
               >
                 {title}
               </Link>
-            )}
+            ))}
           </ul>
         </section>
-      </div >
+      </div>
     </>
-  );
+  )
 }
 
 export default Home
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
-      allPostsData
-    }
+      allPostsData,
+    },
   }
 }
