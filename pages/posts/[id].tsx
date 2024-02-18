@@ -40,7 +40,7 @@ const Post = ({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="mb-12">
         <h1 className="text-[1.6rem] leading-[1.4] mt-8">{postData.title}</h1>
         <div className="text-[0.9rem] mt-4 mb-8">{postDate}</div>
         <div
