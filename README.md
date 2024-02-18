@@ -4,6 +4,8 @@
 
 🚀 Next.js v14.1.0
 
+🔬 Vitest v1.3.0
+
 🎨 shadcn/ui v0.8.0
 
 🐈 Yarn Berry v4.1.0
