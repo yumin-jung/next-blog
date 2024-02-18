@@ -43,4 +43,5 @@ next-env.d.ts
 
 .vscode
 
+# vitest cache
 .cache
