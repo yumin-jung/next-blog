@@ -3,6 +3,12 @@ import { type GetStaticPaths, type GetStaticProps } from "next"
 import Head from "next/head"
 import React from "react"
 import Comment from "@/components/Comment"
+import { motion } from "framer-motion";
+
+const variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+}
 
 const Post = ({
   postData,
@@ -36,7 +42,12 @@ const Post = ({
   const postDate = formatDate(postData.date)
 
   return (
-    <div className="max-w-xl mt-16 mb-24 mx-auto px-4 py-0">
+    <motion.div
+      className="max-w-xl mt-16 mb-24 mx-auto px-4 py-0"
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+    >
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -49,7 +60,7 @@ const Post = ({
         />
       </article>
       <Comment />
-    </div>
+    </motion.div>
   )
 }
 

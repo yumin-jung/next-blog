@@ -6,6 +6,8 @@
 
 🔬 Vitest v1.3.0
 
+✨ Framer Motion v11.0.5
+
 🎨 shadcn/ui v0.8.0
 
 🐈 Yarn Berry v4.1.0
