@@ -81,7 +81,7 @@ export async function getPostData(id: string): Promise<GetPostData> {
         .use(remarkParse)
         .use(remarkRehype)
         .use(rehypePrettyCode, {
-            theme: 'tokyo-night'
+            theme: 'material-theme'
         })
         .use(rehypeStringify)
         .process(matterResult.content)
