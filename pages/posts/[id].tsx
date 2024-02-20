@@ -59,7 +59,7 @@ const Post = ({
         <h1 className="text-[1.6rem] leading-[1.4] mt-8">{postData.title}</h1>
         <div className="text-[0.9rem] mt-4 mb-8">{formatDate(postData.date)}</div>
         <div
-          className="text-[1.1rem] leading-[1.8] font-light"
+          className="text-[1.1rem] leading-[1.8] font-light text-justify"
           dangerouslySetInnerHTML={{ __html: formatHtml(postData.contentHtml) }}
         />
       </article>
