@@ -1,3 +1,6 @@
+'use client';
+
+import React from "react";
 import { useEffect, useRef } from "react";
 
 export default function Comment() {
@@ -19,6 +22,8 @@ export default function Comment() {
         scriptElement.setAttribute("data-input-position", "bottom")
         scriptElement.setAttribute("data-theme", "light")
         scriptElement.setAttribute("data-lang", "ko")
+        // data-testid for testing
+        scriptElement.setAttribute("data-testid", "giscus-comment")
         ref.current?.appendChild(scriptElement);
     }, []);
 
