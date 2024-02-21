@@ -2,7 +2,7 @@ import Head from "next/head"
 import { GetStaticProps } from "next"
 import { getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -11,18 +11,18 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-};
+      staggerChildren: 0.2,
+    },
+  },
+}
 
 const item = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
-    opacity: 1
-  }
-};
+    opacity: 1,
+  },
+}
 
 const Home = ({
   allPostsData,
