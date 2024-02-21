@@ -1,18 +1,18 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
-import rehypePrettyCode from 'rehype-pretty-code'
+import fs from "fs"
+import path from "path"
+import matter from "gray-matter"
+import { unified } from "unified"
+import remarkParse from "remark-parse"
+import remarkRehype from "remark-rehype"
+import rehypeStringify from "rehype-stringify"
+import rehypePrettyCode from "rehype-pretty-code"
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), "posts")
 
 interface AllPostsData {
-    date: string
-    title: string
-    id: string
+  date: string
+  title: string
+  id: string
 }
 
 /**
@@ -20,28 +20,28 @@ interface AllPostsData {
  * @returns {AllPostsData[]}
  */
 export function getSortedPostsData(): AllPostsData[] {
-    const fileNames = fs.readdirSync(postsDirectory)
-    const allPostsData = fileNames.map(fileName => {
-        const id = fileName.replace(/\.md$/, '')
-        const fullPath = path.join(postsDirectory, fileName)
-        const fileContents = fs.readFileSync(fullPath, 'utf8')
-        const matterResult = matter(fileContents)
+  const fileNames = fs.readdirSync(postsDirectory)
+  const allPostsData = fileNames.map((fileName) => {
+    const id = fileName.replace(/\.md$/, "")
+    const fullPath = path.join(postsDirectory, fileName)
+    const fileContents = fs.readFileSync(fullPath, "utf8")
+    const matterResult = matter(fileContents)
 
-        return {
-            id,
-            ...matterResult.data as { date: string, title: string }
-        }
-    })
+    return {
+      id,
+      ...(matterResult.data as { date: string; title: string }),
+    }
+  })
 
-    return allPostsData.sort((a, b) => {
-        return a.date < b.date ? 1 : -1
-    })
+  return allPostsData.sort((a, b) => {
+    return a.date < b.date ? 1 : -1
+  })
 }
 
 interface GetAllPostIds {
-    params: {
-        id: string
-    }
+  params: {
+    id: string
+  }
 }
 
 /**
@@ -50,21 +50,21 @@ interface GetAllPostIds {
  * @returns {GetAllPostIds[]}
  */
 export function getAllPostIds(): GetAllPostIds[] {
-    const fileNames = fs.readdirSync(postsDirectory)
-    return fileNames.map(fileName => {
-        return {
-            params: {
-                id: fileName.replace(/\.md$/, '')
-            }
-        }
-    })
+  const fileNames = fs.readdirSync(postsDirectory)
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(/\.md$/, ""),
+      },
+    }
+  })
 }
 
 interface GetPostData {
-    id: string
-    contentHtml: string
-    date: string
-    title: string
+  id: string
+  contentHtml: string
+  date: string
+  title: string
 }
 
 /**
@@ -74,22 +74,22 @@ interface GetPostData {
  * @returns {Promise<GetPostData>}
  */
 export async function getPostData(id: string): Promise<GetPostData> {
-    const fullPath = path.join(postsDirectory, `${id}.md`)
-    const fileContents = fs.readFileSync(fullPath, 'utf-8')
-    const matterResult = matter(fileContents)
-    const processedContent = await unified()
-        .use(remarkParse)
-        .use(remarkRehype)
-        .use(rehypePrettyCode, {
-            theme: 'material-theme'
-        })
-        .use(rehypeStringify)
-        .process(matterResult.content)
-    const contentHtml = processedContent.toString()
+  const fullPath = path.join(postsDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, "utf-8")
+  const matterResult = matter(fileContents)
+  const processedContent = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypePrettyCode, {
+      theme: "material-theme",
+    })
+    .use(rehypeStringify)
+    .process(matterResult.content)
+  const contentHtml = processedContent.toString()
 
-    return {
-        id,
-        contentHtml,
-        ...(matterResult.data as { date: string, title: string })
-    }
+  return {
+    id,
+    contentHtml,
+    ...(matterResult.data as { date: string; title: string }),
+  }
 }

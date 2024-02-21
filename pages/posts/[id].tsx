@@ -3,7 +3,7 @@ import { type GetStaticPaths, type GetStaticProps } from "next"
 import Head from "next/head"
 import React from "react"
 import Comment from "@/components/comment"
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 const variants = {
   visible: { opacity: 1 },
@@ -11,10 +11,10 @@ const variants = {
 }
 
 /**
-   * yyyy-mm-dd 형태의 데이터를 년, 월, 일 형태로 변환한다.
-   * @param {string} inputDate - yyyy-mm-dd 형태의 날짜 형식 문자열
-   * @returns {string}
-   */
+ * yyyy-mm-dd 형태의 데이터를 년, 월, 일 형태로 변환한다.
+ * @param {string} inputDate - yyyy-mm-dd 형태의 날짜 형식 문자열
+ * @returns {string}
+ */
 function formatDate(inputDate: string): string {
   const date = new Date(inputDate)
   const year = date.getFullYear()

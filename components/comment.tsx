@@ -1,31 +1,31 @@
-'use client';
+"use client"
 
-import React from "react";
-import { useEffect, useRef } from "react";
+import React from "react"
+import { useEffect, useRef } from "react"
 
 export default function Comment() {
-    const ref = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null)
 
-    useEffect(() => {
-        const scriptElement = document.createElement("script");
-        scriptElement.src = "https://giscus.app/client.js";
-        scriptElement.async = true;
-        scriptElement.crossOrigin = "anonymous";
-        scriptElement.setAttribute("data-repo", "yumin-jung/next-blog")
-        scriptElement.setAttribute("data-repo-id", "R_kgDOLMqCOg")
-        scriptElement.setAttribute("data-category", "Announcements")
-        scriptElement.setAttribute("data-category-id", "DIC_kwDOLMqCOs4CdFTO")
-        scriptElement.setAttribute("data-mapping", "pathname")
-        scriptElement.setAttribute("data-strict", "0")
-        scriptElement.setAttribute("data-reactions-enabled", "1")
-        scriptElement.setAttribute("data-emit-metadata", "0")
-        scriptElement.setAttribute("data-input-position", "bottom")
-        scriptElement.setAttribute("data-theme", "light")
-        scriptElement.setAttribute("data-lang", "ko")
-        // data-testid for testing
-        scriptElement.setAttribute("data-testid", "giscus-comment")
-        ref.current?.appendChild(scriptElement);
-    }, []);
+  useEffect(() => {
+    const scriptElement = document.createElement("script")
+    scriptElement.src = "https://giscus.app/client.js"
+    scriptElement.async = true
+    scriptElement.crossOrigin = "anonymous"
+    scriptElement.setAttribute("data-repo", "yumin-jung/next-blog")
+    scriptElement.setAttribute("data-repo-id", "R_kgDOLMqCOg")
+    scriptElement.setAttribute("data-category", "Announcements")
+    scriptElement.setAttribute("data-category-id", "DIC_kwDOLMqCOs4CdFTO")
+    scriptElement.setAttribute("data-mapping", "pathname")
+    scriptElement.setAttribute("data-strict", "0")
+    scriptElement.setAttribute("data-reactions-enabled", "1")
+    scriptElement.setAttribute("data-emit-metadata", "0")
+    scriptElement.setAttribute("data-input-position", "bottom")
+    scriptElement.setAttribute("data-theme", "light")
+    scriptElement.setAttribute("data-lang", "ko")
+    // data-testid for testing
+    scriptElement.setAttribute("data-testid", "giscus-comment")
+    ref.current?.appendChild(scriptElement)
+  }, [])
 
-    return <div ref={ref} />;
+  return <div ref={ref} />
 }
