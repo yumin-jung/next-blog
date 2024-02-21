@@ -2,7 +2,7 @@ import { getAllPostIds, getPostData } from "@/lib/posts"
 import { type GetStaticPaths, type GetStaticProps } from "next"
 import Head from "next/head"
 import React from "react"
-import Comment from "@/components/Comment"
+import Comment from "@/components/comment"
 import { motion } from "framer-motion";
 
 const variants = {
