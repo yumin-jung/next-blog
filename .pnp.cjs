@@ -55,7 +55,6 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.2"],\
           ["next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["postcss", "npm:8.4.35"],\
-          ["pretendard", "npm:1.3.9"],\
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:18.2.0"],\
@@ -6380,7 +6379,6 @@ const RAW_RUNTIME_STATE =
           ["lint-staged", "npm:15.2.2"],\
           ["next", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:14.1.0"],\
           ["postcss", "npm:8.4.35"],\
-          ["pretendard", "npm:1.3.9"],\
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:b12ba291ee2514a0e12483078237052dfe49637e15a84982389921d93eaedaf82cae0b5f1974777fc8769c04321f39e8dad0dd42ea5dbe2469ca2faf97651f79#npm:18.2.0"],\
@@ -6992,15 +6990,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/prelude-ls-npm-1.2.1-3e4d272a55-0b9d2c7680.zip/node_modules/prelude-ls/",\
         "packageDependencies": [\
           ["prelude-ls", "npm:1.2.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["pretendard", [\
-      ["npm:1.3.9", {\
-        "packageLocation": "./.yarn/cache/pretendard-npm-1.3.9-760c0fa60e-e8cd1d7054.zip/node_modules/pretendard/",\
-        "packageDependencies": [\
-          ["pretendard", "npm:1.3.9"]\
         ],\
         "linkType": "HARD"\
       }]\
