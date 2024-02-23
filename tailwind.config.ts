@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss"
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -68,14 +68,14 @@ const config = {
           to: { height: "0" },
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-2deg)' },
-          '50%': { transform: 'rotate(2deg)' },
-        }
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        wiggle: "wiggle 1s ease-in-out infinite",
       },
     },
   },
