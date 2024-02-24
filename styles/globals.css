@@ -72,7 +72,7 @@
     font-weight: 200;
     font-style: normal;
     font-display: swap;
-    src: url(../fonts/PretendardVariable.ttf) format('woff2-variations');
+    src: url(../fonts/PretendardVariable.woff2) format('woff2-variations');
   }
 
   @font-face {
