@@ -69,11 +69,11 @@
 @layer base {
   @font-face {
     font-family: 'Pretendard Variable';
-    /* font-weight: 200; */
-    font-weight: 45 920;
+    font-weight: 200;
+    /* font-weight: 45 920; */
     font-style: normal;
     font-display: swap;
-    src: url(../fonts/PretendardVariable.ttf) format('woff2-variations');
+    src: url(../fonts/PretendardVariable.woff2) format('woff2-variations');
   }
 
   @font-face {
