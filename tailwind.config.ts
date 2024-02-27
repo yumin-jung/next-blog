@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        pretendard: ["var(--pretendard-font)"],
+        tossface: ["var(--tossface-font)"],
+        sourcecodepro: ["var(--sourcecodepro-font)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
