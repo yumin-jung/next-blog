@@ -4,16 +4,6 @@ import Layout from "@/components/layout"
 import localFont from "next/font/local"
 
 const pretendard = localFont({ src: "../public/fonts/Pretendard-Thin.subset.woff2" })
-
-const tossface = localFont({
-  src: [
-    {
-      path: "../public/fonts/TossFaceFontWeb.otf",
-      weight: "400",
-    },
-  ],
-})
-
 const sourcecodepro = localFont({ src: "../public/fonts/SourceCodePro-Regular.otf" })
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -22,7 +12,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <style jsx global>{`
         :root {
           --pretendard-font: ${pretendard.style.fontFamily};
-          --tossface-font: ${tossface.style.fontFamily};
           --sourcecodepro-font: ${sourcecodepro.style.fontFamily};
         }
       `}</style>

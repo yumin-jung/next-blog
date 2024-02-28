@@ -1,6 +1,7 @@
 ---
-title: "Yarn Classic에서 Yarn Berry로의 마이그레이션 🐱"
+title: "Yarn Berry로의 마이그레이션"
 date: "2024-02-10"
+emoji: "CatFace"
 ---
 
 블로그 레포의 패키지 매니저를 Yarn에서 Yarn Berry로 옮겼다. Yarn Berry는 토스의 [node_modules로부터 우리를 구원해 줄 Yarn Berry](https://toss.tech/article/node-modules-and-yarn-berry)에서 처음 알게 되었는데 이번에 GitHub Action으로 AWS에 CI/CD를 구축하는 단계에서 시간을 줄이기 위해 실험을 해 볼 기회가 생겼다.

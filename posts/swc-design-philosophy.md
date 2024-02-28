@@ -1,6 +1,7 @@
 ---
-title: "SWC 설계 철학을 읽고 🧐"
+title: "SWC 설계 철학을 읽고"
 date: "2024-02-08"
+emoji: "FaceWithMonocle"
 ---
 
 [Vercel 강동윤님의 [swc 설계 철학](https://kdy1.github.io/post/2023/7/swc-design-philosophy/)을 보며 든 생각들.]

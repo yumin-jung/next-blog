@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: var(--pretendard-font), var(--tossface-font);
+  font-family: var(--pretendard-font);
 }
 
 a {
