@@ -3,14 +3,7 @@ import type { AppProps } from "next/app"
 import Layout from "@/components/layout"
 import localFont from "next/font/local"
 
-const pretendard = localFont({
-  src: [
-    {
-      path: "../public/fonts/PretendardVariable.woff2",
-      weight: "200",
-    },
-  ],
-})
+const pretendard = localFont({ src: "../public/fonts/Pretendard-Thin.subset.woff2" })
 
 const tossface = localFont({
   src: [
