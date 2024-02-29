@@ -64,8 +64,8 @@ const Home = ({
                   style={{ textDecoration: "none" }}
                   className="flex flex-col text-base p-2 rounded-lg"
                 >
-                  <div className="mb-1 flex">
-                    <Emoji emoji={emoji} />
+                  <div className="mb-0.5 flex">
+                    <Emoji emoji={emoji} width={"1.2rem"} />
                     &nbsp;&nbsp;{title}
                   </div>
                 </Link>
