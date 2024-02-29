@@ -3,6 +3,7 @@ import { GetStaticProps } from "next"
 import { getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import Emoji from "@/components/emoji"
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -11,13 +12,13 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.3,
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
     },
   },
 }
 
 const item = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 10, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
@@ -30,6 +31,7 @@ const Home = ({
   allPostsData: {
     title: string
     id: string
+    emoji: string
   }[]
 }) => {
   return (
@@ -39,30 +41,33 @@ const Home = ({
           <title>기록 남기기</title>
         </Head>
         <section className="text-[1.2rem] leading-normal pt-px">
-          <h2 className="text-2xl leading-[1.4] mx-0 my-4 pl-2">기록 남기기 📝</h2>
-          <motion.ul
-            className="grid gap-4 pt-6 grid-cols-[repeat(2,1fr)]
-                  md:grid-cols-[repeat(3,1fr)]"
-            variants={container}
-            initial="hidden"
-            animate="visible"
+          <h2
+            className="text-2xl leading-[1.4] my-4 pl-4 z-1 pb-3 relative
+          before:content-[''] before:absolute before:left-2 before:bottom-0
+          before:h-px before:w-32 before:border-b-2 before:border-solid
+          before:border-sky-100"
           >
-            {allPostsData.map(({ id, title }) => (
+            기록 남기기
+          </h2>
+          <motion.ul className="" variants={container} initial="hidden" animate="visible">
+            {allPostsData.map(({ id, title, emoji }) => (
               <motion.li
                 key={id}
                 variants={item}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <Link
                   key={id}
                   href={`/posts/${[id]}`}
                   style={{ textDecoration: "none" }}
-                  className="flex flex-col text-base aspect-[1.2] items-center
-                shadow-[rgba(0,0,0,0.1)_0px_4px_12px] p-6 rounded-lg"
+                  className="flex flex-col text-base p-2 rounded-lg"
                 >
-                  {title}
+                  <div className="mb-1 flex">
+                    <Emoji emoji={emoji} />
+                    &nbsp;&nbsp;{title}
+                  </div>
                 </Link>
               </motion.li>
             ))}

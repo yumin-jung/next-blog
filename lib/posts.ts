@@ -13,6 +13,7 @@ interface AllPostsData {
   date: string
   title: string
   id: string
+  emoji: string
 }
 
 /**
@@ -29,7 +30,7 @@ export function getSortedPostsData(): AllPostsData[] {
 
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: string; title: string; emoji: string }),
     }
   })
 
@@ -65,6 +66,7 @@ interface GetPostData {
   contentHtml: string
   date: string
   title: string
+  emoji: string
 }
 
 /**
@@ -90,6 +92,6 @@ export async function getPostData(id: string): Promise<GetPostData> {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as { date: string; title: string; emoji: string }),
   }
 }
