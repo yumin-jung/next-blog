@@ -58,13 +58,13 @@ const Post = ({
         <title>{postData.title}</title>
       </Head>
       <article className="mb-12">
-        <h1 className="text-[1.6rem] leading-[1.4] mt-8 flex">
+        <h1 className="text-lg md:text-2xl leading-[1.4] mt-8 flex">
           {postData.title}&nbsp;
           <Emoji emoji={postData.emoji} />
         </h1>
-        <div className="text-[0.9rem] mt-4 mb-8">{formatDate(postData.date)}</div>
+        <div className="text-xs md:text-sm mt-4 mb-8">{formatDate(postData.date)}</div>
         <div
-          className="text-[1.1rem] leading-[1.8] font-light text-justify"
+          className="text-sm md:text-lg leading-[1.8] font-light text-justify"
           dangerouslySetInnerHTML={{ __html: formatHtml(postData.contentHtml) }}
         />
       </article>

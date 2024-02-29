@@ -22,5 +22,11 @@ pre [data-line] {
 
 span {
   font-family: var(--sourcecodepro-font);
-  font-size: 12px;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  span {
+    font-size: 12px;
+  }
 }
