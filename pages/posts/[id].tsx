@@ -4,6 +4,7 @@ import Head from "next/head"
 import React from "react"
 import Comment from "@/components/comment"
 import { motion } from "framer-motion"
+import Emoji from "@/components/emoji"
 
 const variants = {
   visible: { opacity: 1 },
@@ -43,6 +44,7 @@ const Post = ({
     title: string
     date: string
     contentHtml: string
+    emoji: string
   }
 }) => {
   return (
@@ -56,7 +58,10 @@ const Post = ({
         <title>{postData.title}</title>
       </Head>
       <article className="mb-12">
-        <h1 className="text-[1.6rem] leading-[1.4] mt-8">{postData.title}</h1>
+        <h1 className="text-[1.6rem] leading-[1.4] mt-8 flex">
+          {postData.title}&nbsp;
+          <Emoji emoji={postData.emoji} />
+        </h1>
         <div className="text-[0.9rem] mt-4 mb-8">{formatDate(postData.date)}</div>
         <div
           className="text-[1.1rem] leading-[1.8] font-light text-justify"
