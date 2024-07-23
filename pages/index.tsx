@@ -3,7 +3,6 @@ import { GetStaticProps } from "next"
 import { getSortedPostsData } from "@/lib/posts"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import Emoji from "@/components/emoji"
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -64,10 +63,7 @@ const Home = ({
                   style={{ textDecoration: "none" }}
                   className="flex flex-col text-base p-2 rounded-lg"
                 >
-                  <div className="mb-1 flex">
-                    <Emoji emoji={emoji} />
-                    &nbsp;&nbsp;{title}
-                  </div>
+                  <div className="mb-1 flex">{title}</div>
                 </Link>
               </motion.li>
             ))}

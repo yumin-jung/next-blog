@@ -1,7 +1,6 @@
 ---
 title: "웹 접근성에 대한 고찰"
 date: "2024-02-20"
-emoji: "GuideDog"
 ---
 
 오늘 [next-portfolio](https://yumin.vercel.app)에서 Project 탭으로 이동할 때 대기 시간이 너무 긴 문제를 해결하고자 하였다. 성능의 개선을 확인하기 위해 Lighthouse를 사용하였는데, 성능 개선 과정에서 웹 접근성을 처음 알게 되었고, 이를 개선하는 과정에서 새롭게 느낀 부분이 있어 기록을 남긴다.

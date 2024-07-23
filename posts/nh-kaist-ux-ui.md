@@ -1,7 +1,6 @@
 ---
 title: "NH-KAIST UX Research 회고"
 date: "2024-02-07"
-emoji: "ChartIncreasing"
 ---
 
 NH투자증권 UX 리서치 연구원 업무가 끝난지 한 달 정도가 되었다.

@@ -13,7 +13,6 @@ interface AllPostsData {
   date: string
   title: string
   id: string
-  emoji: string
 }
 
 /**
@@ -66,7 +65,6 @@ interface GetPostData {
   contentHtml: string
   date: string
   title: string
-  emoji: string
 }
 
 /**

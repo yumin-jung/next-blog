@@ -22,6 +22,3 @@ cd next-blog
 yarn
 yarn dev
 ```
-
-## License
-- [tossface](https://toss.im/tossface) provided by the Toss team is applied to this repository.

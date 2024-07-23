@@ -1,7 +1,6 @@
 ---
 title: "Framer Motion 애니메이션 적용"
 date: "2024-02-19"
-emoji: "Sparkles"
 ---
 
 블로그에 Framer Motion을 추가하여 애니메이션을 적용했다. 이번 글에서는 Framer Motion을 적용하는 과정에서 느낀 장단점을 기록하려고 한다.
